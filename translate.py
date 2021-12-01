@@ -32,6 +32,7 @@ def getToken():
 
 
 def geySign(word):
+    #python运行js获取sign
     with open('tmp.js', 'r', encoding='utf-8') as f:
         jstext = f.read()
     ctx = execjs.compile(jstext)
@@ -91,6 +92,7 @@ if __name__ == '__main__':
                 except:
                     print('Unfortunitely -- An Unknow Error Happened, Please wait 10 seconds')
                     time.sleep(10)
+            # 具体所需的功能可以自己print出来看
             dic_obj = response.json()
 
             # 将结果写入result
@@ -119,6 +121,7 @@ if __name__ == '__main__':
                     }
                 }
                 id += 1
+
                 # print(result)
                 all_result.append(result)
                 lastword = word
